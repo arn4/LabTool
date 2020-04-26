@@ -8,5 +8,4 @@ from .significant_digits import percentual_error_digit
 
 from .uncertainties import unarray, unpack_unarray, de2unc, ucurve_fit
 
-from .generic import sprint, decibel, crop_oscilloscope_image
-
+from .generic import sprint, decibel, crop_oscilloscope_image, deg2rad, rad2deg
