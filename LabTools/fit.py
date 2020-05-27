@@ -152,3 +152,23 @@ def circle_fit(X, Y):
     radius = umath.sqrt(uc**2 + vc**2 + (Suu + Svv)/N)
 
     return xc, yc, radius
+
+def relative_difference_circle_fit(x, y, xc, yc, radius):
+    """
+    Calculate the totL distance of points from the circle, normalized with the number of points and the radius.
+    """
+    assert(len(x) == len(y))
+    try:
+        x_, trash = unpack_unarray(x)
+        y_, trash = unpack_unarray(y)
+        r_ = radius.n
+        xc_ = xc.n
+        yc_ = yc.n
+    except AttributeError:
+        x_ = x
+        y_ = y
+        r_ = radius
+        xc_ = xc
+        yc_ = yc
+
+    return numpy.sqrt(sum((x_-xc_)**2+(y_-yc_)**2))/r_/len(x_)

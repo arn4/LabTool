@@ -77,3 +77,6 @@ def test_circle_fit_paper():
     X = unarray(x, [0.001]*len(x))
     Y = unarray(y, [0.001]*len(y))
     Xc, Yc, R = circle_fit(X,Y)
+
+    # test the chi squared quantity
+    assert(relative_difference_circle_fit(x,y,xc,yc,r)==relative_difference_circle_fit(X,Y,Xc,Yc,R))
