@@ -171,4 +171,4 @@ def relative_difference_circle_fit(x, y, xc, yc, radius):
         xc_ = xc
         yc_ = yc
 
-    return numpy.sqrt(sum((x_-xc_)**2+(y_-yc_)**2))/r_/len(x_)
+    return sum(numpy.sqrt((x_-xc_)**2+(y_-yc_)**2))/r_/len(x_)
