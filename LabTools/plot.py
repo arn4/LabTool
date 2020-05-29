@@ -246,6 +246,7 @@ def residual_plot(
 
     x, ux = unpack_unarray(X)
     y, uy = unpack_unarray(Y)
+    pars, upars = unpack_unarray(param)
 
     fig = plot.figure()
     fig.set_size_inches(*DEFAULT_PLOT_DIMENSION)
@@ -260,10 +261,10 @@ def residual_plot(
         if df is None:
             raise TypeError('Errors on x were given but no derivative of f')
         else:
-            errore = numpy.sqrt( uy**2 + (udf(x, *param) * ux)**2 )
+            errore = numpy.sqrt( uy**2 + (udf(x, *pars) * ux)**2 )
     else:
         errore = uy
-    residui = y - uf(x, *param)
+    residui = y - uf(x, *pars)
     if normres:
         residui = residui / errore
 
@@ -309,7 +310,7 @@ def residual_plot(
     # Grafico curva
     #main.grid()
     main.minorticks_on()
-    main.plot(grid, uf(grid, *param), **DEFAULT_PLOT_STYLE)
+    main.plot(grid, uf(grid, *pars), **DEFAULT_PLOT_STYLE)
     if second_f is not None:
         main.plot(grid, suf(grid, *second_param), **DEFAULT_SECOND_PLOT_STYLE)
 
