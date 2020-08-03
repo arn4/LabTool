@@ -1,3 +1,11 @@
-uncertainties
+# Dependencies of the package
 numpy
+uncertainties
+matplotlib
+scipy
+pyaml
+
+# Lint, Test and Build
+flake8
+pytest
 opencv-python
