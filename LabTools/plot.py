@@ -3,7 +3,6 @@
 #  Copyright 2019 Luca Arnaboldi
 
 from .utils import unpack_unarray
-from tikzplotlib import save as save_tikz
 import matplotlib.pyplot as plot
 import numpy
 from uncertainties import unumpy
