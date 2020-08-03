@@ -13,7 +13,7 @@ venv/
 coverage.xml
 main*
 
-#Installing 
-LabTools.egg-info/
+#Installing & Building
+labtools_arna.egg-info/
 build/
 dist/

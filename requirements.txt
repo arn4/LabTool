@@ -8,4 +8,7 @@ pyaml
 # Lint, Test and Build
 flake8
 pytest
+pytest-cov
 opencv-python
+bumpversion
+twine
