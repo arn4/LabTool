@@ -37,11 +37,13 @@ jobs:
     - name: Install LabTools
       run: |
         pip install .
+    - name: Install all requirements
+      run: |
+        pip install -r requirements.txt
     - name: Test with pytest
       env:
         CODECOV_TOKEN: ${{secrets.CODECOV_TOKEN}}
       run: |
-        pip install pytest pytest-cov
         python -m pytest --cov LabTools
         bash <(curl -s https://codecov.io/bash)
 
