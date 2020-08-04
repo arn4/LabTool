@@ -1,3 +1,4 @@
+[![PyPI version](https://badge.fury.io/py/labtools-arna.svg)](https://badge.fury.io/py/labtools-arna)
 [![Build Status](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Farn4%2FLabTools%2Fbadge%3Fref%3Dmaster&style=popout)](https://actions-badge.atrox.dev/arn4/LabTools/goto?ref=master)
 [![codecov](https://codecov.io/gh/arn4/LabTools/branch/master/graph/badge.svg)](https://codecov.io/gh/arn4/LabTools)
 
